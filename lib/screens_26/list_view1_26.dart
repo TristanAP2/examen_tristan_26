@@ -16,18 +16,18 @@ class ListView1Screen extends StatelessWidget {
       body: ListView.separated(
         //nos devuelve cada uno de lis item que le pasamos
         itemBuilder: ((context, index) => ListTile(
-          leading: Icon(AppRoutes.MenuOptions[index].icon),
-          title: Text(AppRoutes.MenuOptions[index].name),
+          leading: Icon(AppRoutes.ListViewOptions[index].icon),
+          title: Text(AppRoutes.ListViewOptions[index].name),
           onTap: (() {
             //con el push sale la opcion de arriba a la izquierda retroceder
-            Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);
+            Navigator.pushNamed(context, AppRoutes.ListViewOptions[index].route);
             //con el pushRecplacement no sale la opcion de retroceder, Util en logins
             //Navigator.pushReplacement(context, route);
           }),
         )),
         //Para saber cuantos elementos tiene la lista
         separatorBuilder: (context, index) => const Divider(),
-          itemCount: AppRoutes.MenuOptions.length) ,  
+          itemCount: AppRoutes.ListViewOptions.length) ,  
       );
   }
 }

@@ -34,7 +34,7 @@ class SingInScreen extends StatelessWidget {
             CustomTextFormField(
               hintText: 'Usuario',
               labelText: 'Usuario',
-              icon: Icons.supervised_user_circle,
+              suffixIcon: Icons.supervised_user_circle,
               formProperty: 'usuario',
               formValues: formValues,
             ),
@@ -45,7 +45,6 @@ class SingInScreen extends StatelessWidget {
               hintText: 'Password',
               labelText: 'Password',
               obscureText: true,
-              icon: Icons.supervised_user_circle,
               formProperty: 'password',
               formValues: formValues,
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color primary = Colors.deepPurple;
+  static const Color primary = Colors.orange;
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     primaryColor: primary,
@@ -13,6 +13,14 @@ class AppTheme {
 
     listTileTheme: const ListTileThemeData(
       iconColor: primary,
+    ),
+ 
+    elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            primary: primary,
+            shape: const StadiumBorder(),
+            elevation: 5,
+          ),
     ),
 
     inputDecorationTheme: const InputDecorationTheme(
@@ -27,6 +35,12 @@ class AppTheme {
       border: OutlineInputBorder(
         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), topRight: Radius.circular(10))
       ),
-    )
+    ),
+
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      backgroundColor: primary,
+      elevation: 10,
+    ),
+    
   );
 }

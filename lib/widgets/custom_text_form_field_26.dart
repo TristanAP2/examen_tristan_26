@@ -1,3 +1,4 @@
+import 'package:examen_tristan_26/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -23,7 +24,9 @@ class CustomTextFormField extends StatelessWidget {
         labelText: labelText,
         helperText: helperText,
         icon: Icon(icon),
+        iconColor: AppTheme.primary,
         suffixIcon: Icon(suffixIcon),
+        suffixIconColor: AppTheme.primary,
       ),
       obscureText: obscureText,
       onChanged: (value) => formValues[formProperty] = value,

@@ -11,9 +11,6 @@ class HomeScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
         body: Center(
           child: Column(
 
@@ -29,12 +26,6 @@ class HomeScreen extends StatelessWidget {
                   final route = MaterialPageRoute(builder: (context) => const SingInScreen());
                   Navigator.push(context, route);
                 },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  shape: const StadiumBorder(),
-                  elevation: 5,
-                  padding: const EdgeInsets.symmetric( vertical: 10, horizontal: 50),
-                ),
                 child: const Text('Sing in', style: TextStyle( fontSize: 20)),
               ),
 
@@ -42,14 +33,8 @@ class HomeScreen extends StatelessWidget {
 
               ElevatedButton(
                 onPressed: null,
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  shape: const StadiumBorder(),
-                  elevation: 5,
-                  padding: const EdgeInsets.symmetric( vertical: 10, horizontal: 50),
-                ),
-                child: const Text('Sing up' , style: TextStyle( fontSize: 20),),
-              )
+                child: Text('Sing up' , style: TextStyle( fontSize: 20),),
+              ),
             ],
           ),
         )
