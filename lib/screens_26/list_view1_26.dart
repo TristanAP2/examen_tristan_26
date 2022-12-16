@@ -20,6 +20,7 @@ class ListView1Screen extends StatelessWidget {
             ),
           ),
         ],
+        automaticallyImplyLeading: false,
       ),
       body: ListView.separated(
         itemBuilder: ((context, index) => ListTile(

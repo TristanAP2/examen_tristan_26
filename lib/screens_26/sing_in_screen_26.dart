@@ -30,22 +30,63 @@ class SingInScreen extends StatelessWidget {
             const SizedBox( height: 30,),
 
             CustomTextFormField(
-              hintText: 'Usuario',
-              labelText: 'Usuario',
-              suffixIcon: Icons.supervised_user_circle,
-              formProperty: 'usuario',
+              hintText: 'Nombre',
+              labelText: 'Nombre completo',
+              helperText: 'Solo letras',
+              icon: Icons.check_circle,
+              suffixIcon: Icons.supervisor_account_outlined, 
+              formProperty: 'nombre', 
               formValues: formValues,
             ),
 
-            const SizedBox( height: 30,),
-
+            const SizedBox(height: 30,),
+        
+            CustomTextFormField(
+              hintText: 'Apellidos',
+              labelText: 'Apellidos',
+              icon: Icons.supervised_user_circle_sharp, 
+              formProperty: 'apellidos', 
+              formValues: formValues,
+            ),
+      
+            const SizedBox(height: 30,),
+      
+            CustomTextFormField(
+              hintText: 'E-Mail',
+              labelText: 'E-Mail',
+              icon: Icons.alternate_email_rounded,
+              //Para que salga en el teclado la @ para el email
+              keyboardType: TextInputType.emailAddress,
+              //para que no salgan las mayusculas
+              textCapitalization: TextCapitalization.none,
+              formProperty: 'email', 
+              formValues: formValues,
+            ),
+      
+            const SizedBox(height: 30,),
+      
             CustomTextFormField(
               hintText: 'Password',
               labelText: 'Password',
+              icon: Icons.alternate_email_rounded,
+              //para contrasenas
               obscureText: true,
-              formProperty: 'password',
+              formProperty: 'password', 
               formValues: formValues,
             ),
+
+            const SizedBox(height: 30,),    
+      
+            CustomTextFormField(
+              hintText: 'Password',
+              labelText: 'Password',
+              icon: Icons.alternate_email_rounded,
+              //para contrasenas
+              obscureText: true,
+              formProperty: 'password', 
+              formValues: formValues,
+            ),
+
 
             const SizedBox( height: 30,),
 

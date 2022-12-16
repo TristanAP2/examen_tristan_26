@@ -2,23 +2,40 @@ import 'package:examen_tristan_26/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
+  
   final String? hintText;
   final String? labelText;
   final String? helperText;
   final IconData? icon;
   final IconData? suffixIcon;
+  final TextInputType? keyboardType;
   final bool obscureText;
+  final TextCapitalization textCapitalization;
 
   final String formProperty;
   final Map<String, String> formValues;
 
-  const CustomTextFormField({super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, required this.formProperty, required this.formValues, this.obscureText = false, });
+  const CustomTextFormField({
+    Key? key, 
+    this.hintText, 
+    this.labelText, 
+    this.helperText, 
+    this.icon, 
+    this.suffixIcon, 
+    this.keyboardType, 
+    this.obscureText = false, 
+    this.textCapitalization = TextCapitalization.words, 
+    required this.formProperty, 
+    required this.formValues,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       autofocus: true,
       autovalidateMode: AutovalidateMode.onUserInteraction,
+      textCapitalization: textCapitalization,
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hintText,
         labelText: labelText,
