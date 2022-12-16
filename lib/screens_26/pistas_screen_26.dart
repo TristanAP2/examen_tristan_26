@@ -1,5 +1,7 @@
+import 'package:examen_tristan_26/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:examen_tristan_26/widgets/widgets.dart';
+
 
 class PistasScreen extends StatelessWidget {
    
@@ -14,8 +16,8 @@ class PistasScreen extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(right: 10),
             child: const CircleAvatar(
-              backgroundColor: Colors.deepPurpleAccent,
-              child: Text('TA'),
+              backgroundColor: AppTheme.primary,
+              backgroundImage: NetworkImage('https://as01.epimg.net/meristation/imagenes/2013/09/17/noticia/1379397600_125748_1532601596_portada_normal.jpg'),
             ),
           ),
         ],
@@ -26,22 +28,31 @@ class PistasScreen extends StatelessWidget {
             children: const [
 
               CustomCard( imageUrl: 'https://allforpadel.com/img/cms/pistas/fx2-1.jpg', 
-              name : 'Pista de padel \nLorem Ipsun  Lorem Ipsun Lorem Ipsun Lorem \n Lorem IpsunLorem IpsunLorem Ipsun s'),
+                name : 'Pista de padel',
+                text: 'Lorem Ipsun  Lorem Ipsun Lorem Ipsun Lorem Lorem IpsunLorem IpsunLorem Ipsun',
+              ),
               
               SizedBox( height: 10,),
-              CustomCard(imageUrl: 'https://barbastro.org/images/areas/deportes/Piscina_climatizada_Large.jpg'
-              , name: 'Piscina cubierta',),
+              CustomCard(
+                imageUrl: 'https://barbastro.org/images/areas/deportes/Piscina_climatizada_Large.jpg',
+                name: 'Piscina cubierta',
+                text: 'Lorem Ipsun  Lorem Ipsun Lorem Ipsun Lorem Lorem IpsunLorem IpsunLorem Ipsun',
+              ),
               
               SizedBox( height: 10,),
-              CustomCard(imageUrl: 'https://grupopineda.eu/wp-content/uploads/2020/04/shutterstock_1832966869.jpg',
-               name: 'Campo de baloncesto'
+              CustomCard(
+                imageUrl: 'https://grupopineda.eu/wp-content/uploads/2020/04/shutterstock_1832966869.jpg',
+                name: 'Campo de baloncesto',
+                text: 'Lorem Ipsun  Lorem Ipsun Lorem Ipsun Lorem Lorem IpsunLorem IpsunLorem Ipsun',
               ),
               
               SizedBox( height: 10,),
               CustomCard(
                 imageUrl: 'https://grupopineda.eu/wp-content/uploads/2020/04/shutterstock_1832966869.jpg', 
-                name: 'Campo de futbol',),
-              
+                name: 'Campo de futbol',
+                text: 'Lorem Ipsun  Lorem Ipsun Lorem Ipsun Lorem Lorem IpsunLorem IpsunLorem Ipsun',
+              ),
+                
             ],
           ),
       ),

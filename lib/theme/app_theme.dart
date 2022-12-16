@@ -20,6 +20,7 @@ class AppTheme {
             primary: primary,
             shape: const StadiumBorder(),
             elevation: 5,
+            padding: const EdgeInsets.symmetric( vertical: 15, horizontal: 50),
           ),
     ),
 

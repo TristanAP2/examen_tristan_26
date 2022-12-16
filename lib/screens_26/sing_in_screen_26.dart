@@ -6,8 +6,6 @@ class SingInScreen extends StatelessWidget {
    
   const SingInScreen({Key? key}) : super(key: key);
 
-  
-  
   @override
   Widget build(BuildContext context) {
     
@@ -59,12 +57,12 @@ class SingInScreen extends StatelessWidget {
               onPressed: () {
                 if ( !myFormKey.currentState!.validate()) {
                   print('Formuario no valido');
-                  
                   return;
+                }else{
+                  final route = MaterialPageRoute(builder: (context) => const ListView1Screen());
+                  print(formValues);
+                  Navigator.pushReplacement(context, route);
                 }
-                final route = MaterialPageRoute(builder: (context) => const ListView1Screen());
-                  Navigator.push(context, route);
-                print(formValues);
               },
             ),
 

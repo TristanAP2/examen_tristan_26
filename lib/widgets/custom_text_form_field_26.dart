@@ -31,11 +31,11 @@ class CustomTextFormField extends StatelessWidget {
       obscureText: obscureText,
       onChanged: (value) => formValues[formProperty] = value,
       validator: (value) {
-        if (value!.length < 3) {
-          return 'Minimo 3 caracteres';
+        if (value!.length < 6) {
+          return 'Minimo 6 caracteres';
         }
         else if (value.length > 20) {
-          return 'Maximo 8 caracteres';
+          return 'Maximo 20 caracteres';
         }
       },
     );

@@ -1,4 +1,5 @@
 import 'package:examen_tristan_26/Router/app_routes_26.dart';
+import 'package:examen_tristan_26/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class ListView1Screen extends StatelessWidget {
@@ -10,22 +11,24 @@ class ListView1Screen extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ListView'),
-        backgroundColor: Colors.amber,
+        title: const Text('Flutter App'),
+        actions: [
+          Container(
+            child: const CircleAvatar(
+              backgroundColor: AppTheme.primary,
+              backgroundImage: NetworkImage('https://as01.epimg.net/meristation/imagenes/2013/09/17/noticia/1379397600_125748_1532601596_portada_normal.jpg'),
+            ),
+          ),
+        ],
       ),
       body: ListView.separated(
-        //nos devuelve cada uno de lis item que le pasamos
         itemBuilder: ((context, index) => ListTile(
           leading: Icon(AppRoutes.ListViewOptions[index].icon),
           title: Text(AppRoutes.ListViewOptions[index].name),
           onTap: (() {
-            //con el push sale la opcion de arriba a la izquierda retroceder
             Navigator.pushNamed(context, AppRoutes.ListViewOptions[index].route);
-            //con el pushRecplacement no sale la opcion de retroceder, Util en logins
-            //Navigator.pushReplacement(context, route);
           }),
         )),
-        //Para saber cuantos elementos tiene la lista
         separatorBuilder: (context, index) => const Divider(),
           itemCount: AppRoutes.ListViewOptions.length) ,  
       );
