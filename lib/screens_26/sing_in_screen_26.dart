@@ -68,7 +68,7 @@ class SingInScreen extends StatelessWidget {
             CustomTextFormField(
               hintText: 'Password',
               labelText: 'Password',
-              icon: Icons.alternate_email_rounded,
+              icon: Icons.password,
               //para contrasenas
               obscureText: true,
               formProperty: 'password', 
@@ -78,15 +78,13 @@ class SingInScreen extends StatelessWidget {
             const SizedBox(height: 30,),    
       
             CustomTextFormField(
-              hintText: 'Password',
-              labelText: 'Password',
-              icon: Icons.alternate_email_rounded,
-              //para contrasenas
+              hintText: 'Repeat password',
+              labelText: 'Repeat password',
+              icon: Icons.password,
               obscureText: true,
               formProperty: 'password', 
               formValues: formValues,
             ),
-
 
             const SizedBox( height: 30,),
 

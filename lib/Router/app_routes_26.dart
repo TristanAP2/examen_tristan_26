@@ -7,7 +7,7 @@ class AppRoutes {
   static final ListViewOptions = <MenuOption>[
     MenuOption(route: 'pistas', icon: Icons.psychology, name: 'Pistas', screens: const PistasScreen()),
     MenuOption(route: 'monitores', icon: Icons.supervised_user_circle, name: 'Monitores', screens: const MonitoresScreen()),
-    MenuOption(route: 'reservas', icon: Icons.phone, name: 'Reservas', screens: const AlertScreen()),
+    MenuOption(route: 'reservas', icon: Icons.phone, name: 'Reservas', screens: const ReservaScreen()),
   ];
 
   static final MenuOptions = <MenuOption>[
