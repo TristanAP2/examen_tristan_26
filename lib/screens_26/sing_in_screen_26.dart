@@ -12,8 +12,6 @@ class SingInScreen extends StatelessWidget {
     final myFormKey = GlobalKey<FormState>();
 
     final Map<String, String> formValues = {
-    'usuario': 'default',
-    'password': 'default'
     };
     return Scaffold(
       body: SingleChildScrollView(
@@ -71,7 +69,7 @@ class SingInScreen extends StatelessWidget {
               icon: Icons.password,
               //para contrasenas
               obscureText: true,
-              formProperty: 'password', 
+              formProperty: 'password1', 
               formValues: formValues,
             ),
 
@@ -82,7 +80,7 @@ class SingInScreen extends StatelessWidget {
               labelText: 'Repeat password',
               icon: Icons.password,
               obscureText: true,
-              formProperty: 'password', 
+              formProperty: 'password2', 
               formValues: formValues,
             ),
 
@@ -98,9 +96,14 @@ class SingInScreen extends StatelessWidget {
                   print('Formuario no valido');
                   return;
                 }else{
-                  final route = MaterialPageRoute(builder: (context) => const ListView1Screen());
-                  print(formValues);
-                  Navigator.pushReplacement(context, route);
+                  if (formValues['password1'] == formValues['password2']) {
+                    final route = MaterialPageRoute(builder: (context) => const ListView1Screen());
+                    print(formValues);
+                    Navigator.pushReplacement(context, route);
+                  }else{
+                    print('La contraseña no es la misma');
+                  return;
+                  }
                 }
               },
             ),

@@ -54,8 +54,13 @@ class CustomTextFormField extends StatelessWidget {
         else if (value.length > 20) {
           return 'Maximo 20 caracteres';
         }
+        if (formProperty == 'password2') {
+              if (value != formValues['password1']) {
+                 return 'Las contrasenas no son las misma';
+              }
+          }
       },
     );
   }
-  
+
 }
